@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./config/database');
-const connectDB = require('./config/db');
+// const connectDB = require('./config/db');
 
 // CREATE express app
 const app = express();
