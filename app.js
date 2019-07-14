@@ -8,7 +8,7 @@ const connectDB = require('./config/db');
 const app = express();
 app.use(cors());
 
-connectDB();
+// connectDB();
 
 app.use(express.json({ extended: false }));
 
@@ -50,15 +50,15 @@ app.use('/api/progress', progressRouter);
 // app.use('/api/auth', require('./routes/api/auth'));
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+// app.listen(PORT);
 
-// db.authenticate()
-// 	.then(result => {
-// 		console.log('server started');
-// 		console.log(result);
-// 		app.listen(PORT);
-// 	})
-// 	.catch(err => {
-// 		console.log('There is an error');
-// 		console.log(err);
-// 	});
+db.authenticate()
+	.then(result => {
+		console.log('server started');
+		console.log(result);
+		app.listen(PORT);
+	})
+	.catch(err => {
+		console.log('There is an error');
+		console.log(err);
+	});
