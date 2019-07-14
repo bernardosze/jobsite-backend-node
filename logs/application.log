@@ -1,0 +1,49 @@
+[2019-07-14T19:24:34.461] [ERROR] SequelizeValidationError - notNull Violation: materials.description cannot be null,
+notNull Violation: materials.type cannot be null
+[2019-07-14T19:24:34.463] [ERROR] Error trying to insert a Material: {}
+[2019-07-14T19:24:34.463] [ERROR] { SequelizeValidationError: notNull Violation: materials.description cannot be null,
+notNull Violation: materials.type cannot be null
+    at Promise.all.then (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\sequelize\lib\instance-validator.js:74:15)
+    at tryCatcher (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:517:31)
+    at Promise._settlePromise (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:574:18)
+    at Promise._settlePromise0 (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:619:10)
+    at Promise._settlePromises (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:699:18)
+    at Promise._fulfill (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:643:18)
+    at PromiseArray._resolve (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise_array.js:144:14)
+    at Promise._settlePromise (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:579:26)
+    at Promise._settlePromise0 (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:619:10)
+    at Promise._settlePromises (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:699:18)
+    at Promise._fulfill (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:643:18)
+    at Promise._resolveCallback (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:437:57)
+    at Promise._settlePromiseFromHandler (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:529:17)
+    at Promise._settlePromise (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:574:18)
+    at Promise._settlePromise0 (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:619:10)
+    at Promise._settlePromises (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:699:18)
+    at Promise._fulfill (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:643:18)
+    at PromiseArray._resolve (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise_array.js:144:14)
+    at Promise._settlePromise (C:\Users\sagri\Documents\Semester4\Capstone\new project\cerberus-backend\node_modules\bluebird\js\release\promise.js:579:26)
+  name: 'SequelizeValidationError',
+  errors:
+   [ ValidationErrorItem {
+       message: 'materials.description cannot be null',
+       type: 'notNull Violation',
+       path: 'description',
+       value: null,
+       origin: 'CORE',
+       instance: [materials],
+       validatorKey: 'is_null',
+       validatorName: null,
+       validatorArgs: [] },
+     ValidationErrorItem {
+       message: 'materials.type cannot be null',
+       type: 'notNull Violation',
+       path: 'type',
+       value: null,
+       origin: 'CORE',
+       instance: [materials],
+       validatorKey: 'is_null',
+       validatorName: null,
+       validatorArgs: [] } ] }

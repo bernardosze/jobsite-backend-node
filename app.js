@@ -28,6 +28,8 @@ const requestRouter = require('./routes/api/request');
 const progressRouter = require('./routes/api/progress');
 const headerRouter = require('./routes/api/requestHeader');
 const fullrequestRouter = require('./routes/api/fullRequest');
+const userRouter = require('./routes/api/user');
+const authRouter = require('./routes/api/auth');
 
 // app.use('/', authRouter);
 // app.use('/', indexRouter);
@@ -44,7 +46,8 @@ app.use('/api/mrequest', requestRouter);
 app.use('/api/header', headerRouter);
 app.use('/api/fullrequest', fullrequestRouter);
 app.use('/api/progress', progressRouter);
-
+app.use('api/user', userRouter);
+app.use('api/auth', authRouter);
 // app.use('/api/task', require('./routes/api/task'));
 // app.use('/api/users', require('./routes/api/user'));
 // app.use('/api/auth', require('./routes/api/auth'));

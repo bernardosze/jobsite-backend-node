@@ -41,6 +41,8 @@ class Config {
       AUTH0_CLIENT_SECRET: Joi.string().required(),
       AUTH0_CALLBACK_URL: Joi.string().required(),
       isProduction: Joi.boolean(),
+      JWT_SECRET: Joi.string().required(),
+
     });
 
     // Object containing external data. It must be validated.
@@ -59,6 +61,8 @@ class Config {
       AUTH0_CLIENT_SECRET: process.env.AUTH0_CLIENT_SECRET,
       AUTH0_CALLBACK_URL: process.env.AUTH0_CALLBACK_URL,
       isProduction: process.env.NODE_ENV === 'production',
+      JWT_SECRET: process.env.JWT_SECRET,
+
     };
   }
 
