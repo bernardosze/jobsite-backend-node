@@ -1,0 +1,4 @@
+{
+    "mongoConn" : "mongodb+srv://bernardosze:1234@nexus-zero-dzoou.mongodb.net/TaskApp?retryWrites=true",
+    "jwtSecret" : "secret"
+}
