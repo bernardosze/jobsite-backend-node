@@ -1,0 +1,42 @@
+{
+	"name": "cerberus-backend",
+	"version": "0.0.1",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "nodemon app.js",
+		"start-server": "node app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Capstone-Humber/cerberus-backend.git"
+	},
+	"keywords": [],
+	"author": "Bernardo Sze <bernardo.sze@gmail.com>",
+	"contributors": [
+		"Sagrika Aggarwal <sagrika224@gmail.com>"
+	],
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Capstone-Humber/cerberus-backend/issues"
+	},
+	"homepage": "https://github.com/Capstone-Humber/cerberus-backend#readme",
+	"dependencies": {
+		"@hapi/joi": "^15.1.0",
+		"bcryptjs": "^2.4.3",
+		"config": "^3.2.0",
+		"cors": "^2.8.5",
+		"dotenv": "^8.0.0",
+		"express": "^4.17.1",
+		"express-validator": "^6.1.1",
+		"jsonwebtoken": "^8.5.1",
+		"log4js": "^4.5.0",
+		"mysql2": "^1.6.5",
+		"sequelize": "^5.10.0",
+		"uuid": "^3.3.2"
+	},
+	"devDependencies": {
+		"nodemon": "^1.19.1"
+	}
+}
