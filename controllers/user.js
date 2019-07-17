@@ -36,12 +36,30 @@ module.exports.getUsers = async () => {
 };
 
 // Fetch a User
-module.exports.getUser = async (userId) => {
+module.exports.getUserById = async (userId) => {
   let data;
   try {
     data = await User.findOne(
       {
         where: { id: userId },
+        attributes: [...userFieldList],
+        raw: true,
+      },
+    );
+  } catch (error) {
+    logger.error(`Error fetching a User ${error}`);
+    data = { status: '500', type: 'Exception', message: error.message };
+  }
+  return data;
+};
+
+// Fetch a User
+module.exports.getUserByEmail = async (email) => {
+  let data;
+  try {
+    data = await User.findOne(
+      {
+        where: { email },
         attributes: [...userFieldList],
         raw: true,
       },
@@ -143,28 +161,24 @@ module.exports.authUser = async (user) => {
     user1 = await User.findOne(
       {
         where: { email: user.email },
-        attributes: [...userFieldList],
+        attributes: ['email', 'password'],
         raw: true,
       },
     );
 
-    console.log(user1.password);
-   
-    if (!user1) {
-      data = { status: '400', type: 'Error', message: 'Invalid Credentials'};
+    if (user1 === null) {
+      data = { status: '400', type: 'Error', message: 'Invalid Credentials' };
+      return data;
     }
 
     const isMatch = await bcrypt.compare(user.password, user1.password);
 
-    if (!isMatch) {
-      data = { status: '400', type: 'Error', message: 'Invalid Credentials'};
+    if (isMatch === false) {
+      data = { status: '400', type: 'Error', message: 'Invalid Credentials' };
+      return data;
     }
-    // const salt = await bcrypt.genSalt(10);
-    // const password = await bcrypt.hash(user.password, salt);
-    // await User.create({
-    //   name: user.name, email: user.email, password, role: user.role,
-    // });
-    // logger.debug(`User successfully created: ${user}`);
+
+
     const payload = {
       user: {
         email: user.email,
